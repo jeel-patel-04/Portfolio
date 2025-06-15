@@ -45,6 +45,26 @@
   border-bottom: 2px solid var(--Dark-Brand-Primary);
 }
 
+/* Initial state */
+.app-header-content,
+.profile-img {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1.2s ease-out;
+}
+
+/* Image slides in from the right */
+.profile-img {
+  transform: translateX(50px);
+}
+
+/* When visible */
+.app-header.visible .app-header-content,
+.app-header.visible .profile-img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
     .app-header {
       background-color: #000;
       color: white;
@@ -76,7 +96,7 @@
       height: 2.6rem;
       fill: var(--Dark-Brand-Primary);
       transform: rotate(0deg);
-      animation: rotateReverse 2s ease-in-out forwards;
+      animation: rotateReverse 3s ease-in-out forwards;
       animation-delay: 1s;
       margin: 0;
     }
@@ -269,8 +289,7 @@ transform: translateX(100px);
   font-size: 12px;
   font-weight: 500;
   padding: 6px 10px;
-  background-color: #fff;
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 6px;
   opacity: 0;
@@ -283,6 +302,16 @@ transform: translateX(100px);
     top: 70px;
 }
 
+.skill-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .styled-project-card:hover .github-button {
   opacity: 1;
