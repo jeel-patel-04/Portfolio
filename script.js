@@ -20,3 +20,34 @@
       }
     });
   });
+  const skillCards = document.querySelectorAll('.skill-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show'); // Remove class when out of view
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+skillCards.forEach(card => {
+  observer.observe(card);
+});
+const header = document.querySelector('.app-header');
+
+const headerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      header.classList.add('visible');
+    } else {
+      header.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.4 });
+
+headerObserver.observe(header);
+
