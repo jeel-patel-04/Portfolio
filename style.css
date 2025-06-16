@@ -11,6 +11,74 @@
       color: #fff;
       scroll-behavior: smooth;
     }
+.typewriter {
+  font-family: monospace;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end) 0.8s infinite, blink 0.7s step-end infinite;
+  font-size: 1.2rem;
+  max-width: 100%;
+  width: 0;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  90% {
+    width: 100%;
+  }
+  100% {
+    width: 100%; 
+  }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+.typewriter {
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: none;
+}
+
+.typewriter.animate {
+  animation: typing 4s steps(40, end)  0.8s infinite, blink 0.75s step-end infinite;
+  opacity: 1;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  90% {
+    width: 100%;
+  }
+  100% {
+    width: 100%; 
+  }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter {
+  font-family: monospace;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  max-width: 100%;
+  width: 0;
+  animation-fill-mode: forwards;
+}
 
     .app {
       max-width: 1000px;
@@ -141,7 +209,6 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
     }
     .skill-card:hover {
       box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
@@ -338,3 +405,4 @@ transform: translateX(100px);
         flex: 1 1 100%;
       }
     }
+
