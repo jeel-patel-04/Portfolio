@@ -22,36 +22,42 @@ window.addEventListener("scroll", () => {
 });
 
 // Animate skill cards on scroll
-const skillCards = document.querySelectorAll('.skill-card');
+const skillCards = document.querySelectorAll(".skill-card");
 
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
-  });
-}, {
-  threshold: 0.3
-});
+const skillObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
 
-skillCards.forEach(card => {
+skillCards.forEach((card) => {
   skillObserver.observe(card);
 });
 
 // Header section visibility class toggle
-const headerElement = document.querySelector('.app-header');
+const headerElement = document.querySelector(".app-header");
 
-const headerVisibilityObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      headerElement.classList.add('visible');
-    } else {
-      headerElement.classList.remove('visible');
-    }
-  });
-}, { threshold: 0.4 });
+const headerVisibilityObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        headerElement.classList.add("visible");
+      } else {
+        headerElement.classList.remove("visible");
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
 
 headerVisibilityObserver.observe(headerElement);
 
@@ -65,15 +71,18 @@ function restartTypewriterEffect() {
   }
 }
 
-const typewriterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      restartTypewriterEffect();
-    }
-  });
-}, {
-  threshold: 0.5
-});
+const typewriterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        restartTypewriterEffect();
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
 
 typewriterObserver.observe(document.querySelector("#header"));
 window.addEventListener("DOMContentLoaded", () => {
