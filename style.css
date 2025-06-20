@@ -422,3 +422,12 @@ ul {
     flex: 1 1 100%;
   }
 }
+.skill-details li i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.skill-details ul {
+  list-style: none;
+  padding-left: 30px;
+}
