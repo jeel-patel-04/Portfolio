@@ -1,6 +1,7 @@
 :root {
   --Dark-Brand-Primary: #a100ff;
 }
+
 html,
 body {
   margin: 0;
@@ -12,43 +13,18 @@ body {
   color: #fff;
   scroll-behavior: smooth;
 }
+
 .typewriter {
   font-family: monospace;
   display: inline-block;
   overflow: hidden;
   border-right: 2px solid #fff;
   white-space: nowrap;
-  animation: typing 4s steps(40, end) 0.8s infinite,
-    blink 0.7s step-end infinite;
   font-size: 1.2rem;
   max-width: 100%;
   width: 0;
-}
-
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  90% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-.typewriter {
   opacity: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  width: 0;
-  animation: none;
+  animation-fill-mode: forwards;
 }
 
 .typewriter.animate {
@@ -61,9 +37,11 @@ body {
   0% {
     width: 0;
   }
+
   90% {
     width: 100%;
   }
+
   100% {
     width: 100%;
   }
@@ -75,25 +53,13 @@ body {
   }
 }
 
-.typewriter {
-  font-family: monospace;
-  display: inline-block;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  font-size: 1.2rem;
-  max-width: 100%;
-  width: 0;
-  animation-fill-mode: forwards;
-  
-}
-
 .app {
   max-width: 95%;
   margin: auto;
   padding: 2rem;
   text-align: left;
 }
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -104,21 +70,48 @@ body {
   top: 0;
   z-index: 100;
   border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
+
 .navbar a {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
+
 .navbar a:hover {
   color: #a100ff;
 }
+
 .navbar a.active {
   color: var(--Dark-Brand-Primary);
   font-weight: bold;
   border-bottom: 2px solid var(--Dark-Brand-Primary);
+}
+
+.explore {
+  background-color: #a100ff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  margin: 5px;
+  border-color: #a100ff;
+  display: flex;
+  justify-content: center;
+}
+
+.exploree {
+  background-color: #a100ff;
+  color: white;
+  border: 1px;
+
+}
+
+.app-header-content {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Initial state */
@@ -146,15 +139,17 @@ body {
   color: white;
   padding: 3rem 1rem;
   border-radius: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .app-header-content {
   max-width: 70%;
 }
+
 .app-header h1 {
   font-size: 3.5rem;
   display: flex;
@@ -164,9 +159,11 @@ body {
   flex-wrap: wrap;
   margin: 0.1rem 0;
 }
+
 .app-header h1 span {
   color: white;
 }
+
 .app-header svg {
   width: 2.6rem;
   height: 2.6rem;
@@ -176,6 +173,7 @@ body {
   animation-delay: 1s;
   margin: 0;
 }
+
 .profile-img {
   width: 220px;
   height: 220px;
@@ -183,14 +181,17 @@ body {
   object-fit: fill;
   border: 3px solid var(--Dark-Brand-Primary);
 }
+
 @keyframes rotateReverse {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-90deg);
   }
 }
+
 section {
   background: #111;
   padding: 2rem;
@@ -199,18 +200,21 @@ section {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
   text-align: left;
 }
+
 h2 {
   color: var(--Dark-Brand-Primary);
   border-bottom: 2px solid var(--Dark-Brand-Primary);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .skill-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
 }
+
 .skill-card {
   flex: 1 1 1;
   min-width: 250px;
@@ -221,10 +225,20 @@ h2 {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
 }
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .skill-card:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
+
 .skill-details {
   position: absolute;
   bottom: 0;
@@ -240,15 +254,19 @@ h2 {
 .skill-card.langs {
   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
 }
+
 .skill-card.web {
   background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
 }
+
 .skill-card.tools {
   background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
 }
+
 .resume {
   margin: 1rem 0;
 }
+
 .resume a {
   background: var(--Dark-Brand-Primary);
   color: white;
@@ -257,20 +275,25 @@ h2 {
   display: inline-block;
   text-decoration: none;
 }
+
 a {
   color: #c180ff;
   text-decoration: none;
 }
+
 .resume a:hover {
   background-color: #8000ca;
 }
+
 .contact a:hover {
   color: #a100ff;
 }
-.leetcode p{
+
+.leetcode p {
   display: flex;
   justify-content: center;
 }
+
 .footer {
   background-color: #111;
   padding: 1rem;
@@ -281,9 +304,11 @@ a {
   border-radius: 0.5rem;
   margin-top: 2rem;
 }
+
 ul {
   margin-top: 30px;
 }
+
 .styled-projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -301,31 +326,48 @@ ul {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
+
 .net {
-  background-color: black;
-  opacity: 100;
   background: url("https://www.zeebiz.com/webstories/wp-content/uploads/2024/03/movie-background-collage-scaled.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .nike {
   background: url("https://plus.unsplash.com/premium_photo-1684785618727-378a3a5e91c5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWNvbW1lcmNlfGVufDB8fDB8fHww");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.cpp {
+
+.pass {
   background: url("https://dynamicmedia.accenture.com/is/image/accenture/Al-Etihad-Glance-Card%3Arad-card-full?ts=1740599077513&fit=constrain&qlt=50&dpr=off");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+.url {
+  background: url("https://m.media-amazon.com/images/I/510sFVU23DL.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cpp {
+  background: url("https://dengsolutions.com/deng_A478Erd/images/bank%20management.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* .cpp {
+  background: url("https://dynamicmedia.accenture.com/is/image/accenture/Al-Etihad-Glance-Card%3Arad-card-full?ts=1740599077513&fit=constrain&qlt=50&dpr=off");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 
 .styled-project-card:hover {
   transform: translateY(-5px);
-}
-.styled-project-card:hover {
   background: #000;
 }
 
@@ -333,6 +375,7 @@ ul {
   opacity: 1;
   transform: translateY(0);
 }
+
 .project-text p {
   opacity: 0;
   transform: translateX(100px);
@@ -388,17 +431,6 @@ ul {
   top: 110px;
 }
 
-.skill-card {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
-}
-
-.skill-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .styled-project-card:hover .github-button {
   opacity: 1;
   transform: translateY(0);
@@ -409,49 +441,59 @@ ul {
   font-size: 1.2rem;
   vertical-align: middle;
 }
+
 .skill-details ul {
   list-style: none;
   padding-left: 30px;
 }
 
-
 @media (max-width: 768px) {
   .app {
     padding: 1rem;
   }
+
   .app-header {
     flex-direction: column;
     align-items: center;
   }
+
   .app-header-content {
     max-width: 100%;
     text-align: center;
   }
+
   .profile-img {
     margin-top: 1rem;
   }
+
   .skill-card {
     flex: 1 1 100%;
   }
-  .navbar{
-    gap:1rem;
+
+  .navbar {
+    gap: 1rem;
     font-size: 12px;
   }
+
   .app-header h1 {
-  font-size: 2rem;
-  margin-left: 45px;
+    font-size: 2rem;
+    margin-left: 45px;
   }
-  .typewriter{
+
+  .typewriter {
     font-size: 0.8rem;
   }
+
   .profile-img {
-  width: 110px;
-  height: 110px;
+    width: 110px;
+    height: 110px;
   }
-  body{
+
+  body {
     font-size: 10px;
   }
-  .skill-card{
+
+  .skill-card {
     min-width: 200px;
     min-height: 250px;
   }
