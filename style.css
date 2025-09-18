@@ -108,7 +108,16 @@ body {
   border: 1px;
 
 }
+/* Link hover */
+.explore:hover {
+  background-color: #8000ca;
+}
 
+/* Button hover → also affect parent link */
+.explore:hover .exploree,
+.exploree:hover {
+  background-color: #8000ca;
+}
 .app-header-content {
   display: flex;
   flex-direction: column;
@@ -498,3 +507,4 @@ ul {
     min-height: 250px;
   }
 }
+
