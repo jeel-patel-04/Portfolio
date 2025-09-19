@@ -144,3 +144,9 @@ document.querySelectorAll('.skill-card, .styled-project-card').forEach((card) =>
     card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
   });
 });
+
+window.history.replaceState(null, null, window.location.pathname);
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
