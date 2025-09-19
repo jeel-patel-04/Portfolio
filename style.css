@@ -108,6 +108,7 @@ body {
   border: 1px;
 
 }
+
 /* Link hover */
 .explore:hover {
   background-color: #8000ca;
@@ -118,6 +119,7 @@ body {
 .exploree:hover {
   background-color: #8000ca;
 }
+
 .app-header-content {
   display: flex;
   flex-direction: column;
@@ -294,6 +296,7 @@ a {
   background-color: #8000ca;
 }
 
+
 .contact a:hover {
   color: #a100ff;
 }
@@ -356,18 +359,21 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .url {
   background: url("https://m.media-amazon.com/images/I/510sFVU23DL.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .cpp {
   background: url("https://dengsolutions.com/deng_A478Erd/images/bank%20management.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 /* .cpp {
   background: url("https://dynamicmedia.accenture.com/is/image/accenture/Al-Etihad-Glance-Card%3Arad-card-full?ts=1740599077513&fit=constrain&qlt=50&dpr=off");
   background-size: cover;
@@ -464,15 +470,22 @@ ul {
   .app-header {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
   }
 
+  .explore{
+    visibility: hidden;
+  }
   .app-header-content {
     max-width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
   }
 
   .profile-img {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .skill-card {
@@ -480,17 +493,17 @@ ul {
   }
 
   .navbar {
-    gap: 1rem;
-    font-size: 12px;
+    gap: 2rem;
+    font-size: 15px;
   }
 
   .app-header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 45px;
   }
 
   .typewriter {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .profile-img {
@@ -499,7 +512,7 @@ ul {
   }
 
   body {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .skill-card {
@@ -508,3 +521,32 @@ ul {
   }
 }
 
+/* .skill-card {
+  flex: 1 1 1;
+  min-width: 250px;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+  flex: 1 1 100%;
+}
+
+.progress {
+  height: 8px;
+  background: #222;
+  border-radius: 5px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #a100ff, #8000ca);
+  transition: width 1.2s ease;
+}
+
+.skill-card:hover .progress div {
+  width: var(--level);
+} */
