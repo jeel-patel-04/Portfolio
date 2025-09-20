@@ -504,7 +504,7 @@ ul {
   }
 
   .typewriter {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .profile-img {
@@ -520,6 +520,17 @@ ul {
     min-width: 200px;
     min-height: 250px;
   }
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* ensures particles stay behind content */
+  background: #000;
+  /* fallback background */
 }
 
 /* .skill-card {
@@ -551,14 +562,3 @@ ul {
 .skill-card:hover .progress div {
   width: var(--level);
 } */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* ensures particles stay behind content */
-  background: #000;
-  /* fallback background */
-}
