@@ -521,6 +521,23 @@ ul {
     min-height: 250px;
   }
 }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 4rem;
+}
+
+.skills-grid img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.2);
+}
 #particles-js {
   position: fixed;
   top: 0;
@@ -532,33 +549,3 @@ ul {
   background: #000;
   /* fallback background */
 }
-
-/* .skill-card {
-  flex: 1 1 1;
-  min-width: 250px;
-  transition: all 0.4s ease;
-}
-
-.skill-card:hover {
-  flex: 1 1 100%;
-}
-
-.progress {
-  height: 8px;
-  background: #222;
-  border-radius: 5px;
-  margin-top: 6px;
-  overflow: hidden;
-}
-
-.progress div {
-  height: 100%;
-  width: 0;
-  border-radius: 5px;
-  background: linear-gradient(90deg, #a100ff, #8000ca);
-  transition: width 1.2s ease;
-}
-
-.skill-card:hover .progress div {
-  width: var(--level);
-} */
