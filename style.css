@@ -8,7 +8,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #000;
+  /* background-color: #000; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   scroll-behavior: smooth;
@@ -146,7 +146,7 @@ body {
 }
 
 .app-header {
-  background-color: #000;
+  /* background: rgba(17, 17, 17, 0.42); */
   color: white;
   padding: 3rem 1rem;
   border-radius: 1rem;
@@ -204,7 +204,7 @@ body {
 }
 
 section {
-  background: #111;
+  background: rgba(17, 17, 17, 0.305);
   padding: 2rem;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
@@ -307,7 +307,7 @@ a {
 }
 
 .footer {
-  background-color: #111;
+  background: rgba(17, 17, 17, 0.305);
   padding: 1rem;
   text-align: center;
   border-top: 1px solid #333;
@@ -474,9 +474,10 @@ ul {
     padding: 1rem;
   }
 
-  .explore{
+  .explore {
     visibility: hidden;
   }
+
   .app-header-content {
     max-width: 100%;
     text-align: center;
@@ -550,3 +551,14 @@ ul {
 .skill-card:hover .progress div {
   width: var(--level);
 } */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* ensures particles stay behind content */
+  background: #000;
+  /* fallback background */
+}
