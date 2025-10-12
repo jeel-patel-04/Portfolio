@@ -374,12 +374,12 @@ ul {
   background-position: center;
 }
 
-/* .cpp {
-  background: url("https://dynamicmedia.accenture.com/is/image/accenture/Al-Etihad-Glance-Card%3Arad-card-full?ts=1740599077513&fit=constrain&qlt=50&dpr=off");
+.greenai {
+  background: url("https://www.nexcom.com/UploadFiles/FCKeditor/image/Product_News/240429-MCS-ATC-3750-IP7-6C/Edge%20AI%20Telematics%20Solution-ATC-3750-IP7-6C.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-} */
+}
 
 .styled-project-card:hover {
   transform: translateY(-5px);
